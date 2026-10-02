@@ -1,6 +1,12 @@
 import torch
 
 from torch import nn
+import sys
+from pathlib import Path
+
+DKM_ROOT = next(p for p in Path(__file__).resolve().parents if p.name == "DKM")
+sys.path.insert(0, str(DKM_ROOT))
+
 from dkm.models.dkm import *
 from dkm.models.encoders import *
 
